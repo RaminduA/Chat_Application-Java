@@ -1,0 +1,5 @@
+.msgBox {
+    -fx-background-color: white;
+    -fx-font-size: 15px;
+    -fx-text-fill: black;
+}

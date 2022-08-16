@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="579.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientViewController">
+   <children>
+      <AnchorPane prefHeight="605.0" prefWidth="349.0" style="-fx-background-color: white;">
+         <children>
+            <TextField layoutX="36.0" layoutY="544.0" prefHeight="30.0" prefWidth="241.0" styleClass="msgBox" stylesheets="@../assets/styles/styles.css" />
+            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="292.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/icons8-sent-90.png" />
+               </image>
+            </ImageView>
+            <TextArea layoutX="35.0" layoutY="100.0" prefHeight="424.0" prefWidth="278.0" style="-fx-background-color: white;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextArea>
+            <ImageView fitHeight="75.0" fitWidth="95.0" layoutX="35.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/icons8-account-skin-type-3-96.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="117.0" layoutY="47.0" text="Client 01">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
