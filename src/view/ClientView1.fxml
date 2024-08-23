@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="976.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientView1Controller">
+    <ImageView fitHeight="976.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../assets/images/chat-bg.png" />
+    </ImageView>
+    <AnchorPane prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #171717;">
+        <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="32.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/images/icons/back-icon.png" />
+        </ImageView>
+        <AnchorPane layoutX="75.0" layoutY="25.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #2c2c2e; -fx-background-radius: 100%;">
+            <ImageView fitHeight="42.0" fitWidth="50.0" layoutX="4.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../assets/images/icons/avatar-icon.png" />
+            </ImageView>
+        </AnchorPane>
+        <Label fx:id="lblUser" layoutX="141.0" layoutY="29.0" prefHeight="42.0" prefWidth="162.0" text="First User " textFill="WHITE">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="380.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/images/icons/video-call-icon.png" />
+        </ImageView>
+        <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="440.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/images/icons/voice-call-icon.png" />
+        </ImageView>
+    </AnchorPane>
+    <ScrollPane layoutY="100.0" prefHeight="725.0" prefWidth="500.0" stylesheets="@../assets/styles/scroll-pane.css">
+        <VBox fx:id="messageArea" prefHeight="723.0" prefWidth="489.0" style="-fx-background-color: transparent;">
+            <HBox prefHeight="148.0" prefWidth="172.0" style="-fx-background-color: transparent;">
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #056162;" />
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="148.0" prefWidth="172.0">
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3C3C3E;" />
+            </HBox>
+        </VBox>
+    </ScrollPane>
+    <Pane fx:id="emojiPane" layoutY="826.0" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #4b4b4d;">
+        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="9.0" onMouseClicked="#emoji1OnAction" pickOnBounds="true">
+            <Image url="@../assets/images/emojis/smile-emoji.png" />
+        </ImageView>
+        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="67.0" layoutY="8.0" onMouseClicked="#emoji2OnAction" pickOnBounds="true">
+            <Image url="@../assets/images/emojis/laugh-emoji.png" />
+        </ImageView>
+    </Pane>
+    <AnchorPane layoutY="876.0" prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #171717;">
+        <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="24.0" layoutY="36.0" onMouseClicked="#openEmojisOnAction" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/images/icons/emojis-icon.png" />
+        </ImageView>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="391.0" layoutY="31.0" onMouseClicked="#sendImageOnAction" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/images/icons/photos-icon.png" />
+        </ImageView>
+        <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="442.0" layoutY="34.0" onMouseClicked="#sendOnAction" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/images/icons/send-icon.png" />
+        </ImageView>
+        <TextField fx:id="txtMessage" layoutX="71.0" layoutY="25.0" prefHeight="50.0" prefWidth="304.0" style="-fx-background-color: #4b4b4d; -fx-font-size: 18px; -fx-text-fill: #fff; -fx-background-radius: 50px;" />
+    </AnchorPane>
+</AnchorPane>

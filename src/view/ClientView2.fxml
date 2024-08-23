@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="976.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientViewController">
+<AnchorPane prefHeight="976.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientView2Controller">
     <children>
       <ImageView fitHeight="976.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -41,48 +40,44 @@
                   <Image url="@../assets/images/icons/voice-call-icon.png" />
                </image>
             </ImageView>
-            <Label layoutX="141.0" layoutY="29.0" prefHeight="42.0" prefWidth="162.0" text="First User " textFill="WHITE">
+            <Label fx:id="lblUser" layoutX="141.0" layoutY="29.0" prefHeight="42.0" prefWidth="162.0" text="Second User " textFill="WHITE">
                <font>
                   <Font size="26.0" />
                </font></Label>
          </children></AnchorPane>
-      <ScrollPane layoutX="3.0" layoutY="138.0" prefHeight="654.0" prefWidth="494.0" styleClass="msgBox" stylesheets="@../assets/styles/styles.css">
-         <content>
-            <VBox fx:id="vBox" prefHeight="651.0" prefWidth="490.0" style="-fx-background-color: black; -fx-background-image: ./assets/images/chat-bg.png;" />
-         </content>
-      </ScrollPane>
+      <VBox fx:id="messageArea" layoutX="5.0" layoutY="126.0" prefHeight="658.0" prefWidth="484.0" style="-fx-background-color: transparent;" />
       <Pane fx:id="emojiPane" layoutY="826.0" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #4b4b4d;">
          <children>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="9.0" onMouseClicked="#emoji1OnAction" pickOnBounds="true">
                <image>
-                  <Image url="@../../../../../../INP%20CW/src/assests/smile.png" />
+                  <Image url="@../assets/images/emojis/smile-emoji.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="67.0" layoutY="8.0" onMouseClicked="#emoji2OnAction" pickOnBounds="true">
                <image>
-                  <Image url="@../../../../../../INP%20CW/src/assests/smiling.png" />
+                  <Image url="@../assets/images/emojis/laugh-emoji.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
       <AnchorPane layoutY="876.0" prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #171717;">
          <children>
-            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="24.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="24.0" layoutY="36.0" onMouseClicked="#openEmojisOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/images/icons/emojis-icon.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="391.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="391.0" layoutY="31.0" onMouseClicked="#sendImageOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/images/icons/photos-icon.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="442.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="442.0" layoutY="34.0" onMouseClicked="#sendOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/images/icons/send-icon.png" />
                </image>
             </ImageView>
-              <TextField layoutX="71.0" layoutY="25.0" prefHeight="50.0" prefWidth="304.0" style="-fx-background-color: #4b4b4d;" styleClass="msgBox" stylesheets="@../assets/styles/styles.css" />
+              <TextField fx:id="txtMessage" layoutX="71.0" layoutY="25.0" prefHeight="50.0" prefWidth="304.0" />
          </children>
       </AnchorPane>
     </children>
